@@ -1,12 +1,19 @@
-import InputStyled from './Input.styles';
+import { forwardRef } from 'react';
+import styles from './input.module.css';
 
-type InputProps = {
-  type: string;
-  placeholder: string;
-};
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  // custom props will be added here
+}
 
-const Input = ({ type }: InputProps) => {
-  return <InputStyled type={type} />;
-};
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ className, ...props }, ref) => {
+    return (
+      <input className={`${styles.input} ${className}`} ref={ref} {...props} />
+    );
+  }
+);
+
+Input.displayName = 'Input';
 
 export default Input;

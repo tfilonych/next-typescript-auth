@@ -1,13 +1,21 @@
-import { ReactNode } from 'react';
-import ButtonStyles from './Button.styles';
+import { forwardRef, ReactNode } from 'react';
+import styles from './button.module.css';
 
-type ButtonProps = {
-  type: 'button' | 'submit';
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-};
+}
 
-const Button = ({ type, children }: ButtonProps) => {
-  return <ButtonStyles>{children}</ButtonStyles>;
-};
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <button className={`${styles.button} ${className}`} ref={ref} {...props}>
+        {children}
+      </button>
+    );
+  }
+);
+
+Button.displayName = 'Button';
 
 export default Button;

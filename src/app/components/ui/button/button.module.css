@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export default styled.button`
+.button {
   padding: 0.6rem;
   font-size: 1.2rem;
   background-color: #435870;
@@ -8,8 +6,9 @@ export default styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3 ease-in-out;
 
   &:hover {
-    background-color: #52708e;
+    background-color: #5f7c9c;
   }
-`;
+}
