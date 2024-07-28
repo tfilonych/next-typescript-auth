@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import ErrorStyled from './Error.styles';
+import styles from './Error.module.css';
 
 type ErrorProps = {
   children: ReactNode;
 };
 
 const Error = ({ children }: ErrorProps) => {
-  return <ErrorStyled>{children}</ErrorStyled>;
+  return <p className={styles.error}>{children}</p>;
 };
 
 export default Error;
