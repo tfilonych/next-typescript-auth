@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/no-unescaped-entities
 import Link from 'next/link';
 import styles from './header.module.css';
 import { verifySession, deleteSession } from '@/app/(auth)/session';

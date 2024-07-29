@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/no-unescaped-entities
 import { verifySession } from './(auth)/session';
 
 export default async function Home() {
