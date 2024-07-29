@@ -1,4 +1,3 @@
-// @typescript-eslint/no-unused-vars
 import { useState } from 'react';
 import Button from './ui/button/Button';
 
@@ -9,6 +8,7 @@ type SignUpButtonProps = {
 };
 
 const SubmitButton = ({ title, type = 'submit' }: SignUpButtonProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [pending, setPending] = useState<boolean>(false);
 
   return (
