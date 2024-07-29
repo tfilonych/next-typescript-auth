@@ -1,4 +1,5 @@
 // eslint-disable-next-line react/no-unescaped-entities
+import Image from 'next/image';
 import { verifySession } from './(auth)/session';
 
 export default async function Home() {
@@ -7,12 +8,18 @@ export default async function Home() {
   return (
     <main>
       {session?.isAuth ? (
-        <img src="/HiThere.png" alt="Please, log in" width="300px" />
+        <Image
+          src="/HiThere.png"
+          alt="Please, log in"
+          width="200"
+          height="200"
+        />
       ) : (
-        <img
+        <Image
           src="/Please_log_in_image.png"
           alt="Please, log in"
-          width="300px"
+          width="250"
+          height="200"
         />
       )}
     </main>

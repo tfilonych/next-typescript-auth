@@ -1,5 +1,4 @@
-import connectMongo from '@/app/lib/connect-mongo';
-import mongoose, { model, Schema, Types } from 'mongoose';
+import mongoose, { model, Schema } from 'mongoose';
 
 export interface IUser {
   email: string;

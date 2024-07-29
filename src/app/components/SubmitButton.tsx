@@ -1,3 +1,4 @@
+// @typescript-eslint/no-unused-vars
 import { useState } from 'react';
 import Button from './ui/button/Button';
 
