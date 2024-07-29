@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Debug - List files in dist
-        run: ls -la dist
+        run: ls -la out
 
       - name: Debug - Git status
         run: git status
