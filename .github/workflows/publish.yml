@@ -34,12 +34,12 @@ jobs:
         run: npx next build
 
       - name: Verify build output
-        run: ls -la ./out
+        run: ls -la ./dist
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     environment:
