@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import styles from './Error.module.css';
+import styles from './error.module.css';
 
 type ErrorProps = {
   children: ReactNode;
