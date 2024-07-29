@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useFormStatus } from 'react-dom';
 import Button from './ui/button/Button';
 
 type btnTypes = 'submit' | 'reset' | 'button';
